@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+      android:layout_width="120dp"
+      android:layout_height="wrap_content"
+      android:text="TITLE : "
+      android:textSize="20dp"/>
+    <EditText
+      android:layout_width="120sp"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:id="@+id/userID"
+      />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+      android:layout_width="120dp"
+      android:layout_height="wrap_content"
+      android:text="BODY : "
+      android:textSize="20dp"/>
+    <EditText
+      android:layout_width="120sp"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:id="@+id/id"
+      />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="153dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal">
+    <Button
+      android:id="@+id/button"
+      android:layout_width="wrap_content"
+      android:layout_height="59dp"
+      android:paddingTop="20dp"
+      android:gravity="center_horizontal"
+      android:text="ADD"/>
+  </LinearLayout>
+
+</LinearLayout>
