@@ -18,11 +18,12 @@
       android:layout_height="wrap_content"
       android:text="TITLE : "
       android:textSize="20dp"/>
+
     <EditText
       android:layout_width="120sp"
       android:layout_height="wrap_content"
       android:textColor="#000000"
-      android:id="@+id/userID"
+      android:id="@+id/title_value"
       />
   </LinearLayout>
 
@@ -38,11 +39,12 @@
       android:layout_height="wrap_content"
       android:text="BODY : "
       android:textSize="20dp"/>
+
     <EditText
       android:layout_width="120sp"
       android:layout_height="wrap_content"
       android:textColor="#000000"
-      android:id="@+id/id"
+      android:id="@+id/body_value"
       />
   </LinearLayout>
 
@@ -60,4 +62,9 @@
       android:text="ADD"/>
   </LinearLayout>
 
+<TextView
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:visibility="gone"
+  android:id="@+id/tv_response"/>
 </LinearLayout>

@@ -3,6 +3,8 @@ package com.example.shreya.jsonparsing;
 import java.util.List;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -21,7 +23,10 @@ public interface PostService {
     retrofit2.Call<List<Post>> getPosts(@Query("userId") Long userId);
 
     @POST("posts")
-    retrofit2.Call<Post> createPost(@Body userPost post);
+    @FormUrlEncoded
+    retrofit2.Call<Post> createPost(@Field("title") String title,
+            @Field("body") String body,
+            @Field("userId") long userId);
 
     @PUT("posts/{id}")
     retrofit2.Call<Post> updatePost(@Path("id") Long id, @Body Post post);

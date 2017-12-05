@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -74,17 +76,22 @@ public class MainActivity extends AppCompatActivity implements Callback<List<Pos
 
             @Override
             public boolean onCreateOptionsMenu(Menu menu) {
+                menu.clear();
                 // Inflate the menu; this adds items to the action bar if it is present.
-                getMenuInflater().inflate(R.menu.menu, menu);
+                MenuInflater inflater=getMenuInflater();
+                inflater.inflate(R.menu.menu, menu);
+
+
                 return super.onCreateOptionsMenu(menu);
             }
 
-        public void update(MenuItem item){
-            Intent intent = new Intent(this,FormActivity.class);
-            intent.putExtra("BASE_URL",REST_API_BASEURL);
-            this.startActivity(intent);
 
-        }
+            public void update(MenuItem item){
+                Intent intent = new Intent(this,FormActivity.class);
+                intent.putExtra("BASE_URL",REST_API_BASEURL);
+                this.startActivity(intent);
+
+            }
 
         public void doRefresh(MenuItem item) {
             if (listCall == null) {
